@@ -5,7 +5,7 @@ import { loadFull } from "tsparticles";
 
 const ParticlesBackground = () => {
   const particlesInit = async (main) => {
-    // Inicializa el motor completo
+    
     await loadFull(main);
   };
 
