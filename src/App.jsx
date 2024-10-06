@@ -1,13 +1,26 @@
-import './App.css'
-import Home from "./components/Home"
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";  
+import Skills from "./components/Skills";  
+import ParticlesBackground from "./components/ParticlesBackground"; 
+import NavBar from "./components/NavBar";
+import './App.css';  
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <Home />
-    </>
-  )
-}
+    <Router>
+      {/* Particles as Background */}
+      <ParticlesBackground />   
+      <NavBar/>    
 
-export default App
+      {/* Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/skills" element={<Skills />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
