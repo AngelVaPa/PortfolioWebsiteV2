@@ -29,7 +29,7 @@ const Home = () => {
               <a href="#portfolio" className="btn btn-primary btn-lg me-3">
                 View My Work
               </a>
-              <a href="/path/to/cv.pdf" className="btn btn-outline-light btn-lg">
+              <a href="../../public/documents/AngelVazquezCV.pdf" download className="btn btn-outline-light btn-lg">
                 Download CV
               </a>
             </div>
