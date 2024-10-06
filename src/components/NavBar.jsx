@@ -1,12 +1,14 @@
  // eslint-disable-next-line no-unused-vars
 import React from "react";
+import profileImage from '../images/javap_logo.png';
+import "../css/NavBar.css"
 
 const NavBar = () => {
 return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container">
     <a className="navbar-brand" href="/">
-        Angel Vazquez
+        <img src={profileImage} alt="Profile" className="javap_logo" />
     </a>
     <button
         className="navbar-toggler"
