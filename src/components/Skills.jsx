@@ -1,13 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import RubikCube3D from './RubikCube3D';
+import "../css/Skills.css"
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-5">Skills</h2>
+    <section id="skills" className="py-5 bg-light"> 
+      <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '80vh' }}>
+        <h2 className="text-center mb-5">Skills</h2> 
+        <RubikCube3D /> 
         
-        <div className="row">
+        <div className="row mt-5">
           {/* Programming Languages */}
           <div className="col-lg-6 mb-4">
             <h4 className="text-primary">Programming Languages</h4>
