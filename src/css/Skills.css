@@ -1,0 +1,39 @@
+.rubik-cube-container {
+  width: 150%;
+  height: 150%; 
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  z-index: 3; /* Asegúrate de que sea mayor que el del cubo */
+}
+
+/* Estilos de texto */
+h2 {
+  color: #007bff; /* Color del título de habilidades */
+  text-align: center; /* Centrar el título */
+}
+
+h4 {
+  color: #007bff; /* Color de los subtítulos */
+}
+
+/* Estilos de listas */
+.list-group {
+  list-style: none; /* Quitar los puntos de la lista */
+  padding: 0; /* Quitar padding */
+}
+
+.list-group-item {
+  background-color: #fff; /* Color de fondo de los ítems de la lista */
+  border: 1px solid #dee2e6; /* Bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Espacio entre ítems */
+}
+
+#tsparticles {
+  z-index: 1; 
+}
