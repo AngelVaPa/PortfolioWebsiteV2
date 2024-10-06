@@ -13,29 +13,33 @@ const RubikCube3D = () => {
     
     // Establecer el color de fondo transparente
     renderer.setClearColor(0x000000, 0); 
-    mountRef.current.appendChild(renderer.domElement);
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement);
+    }
 
     // Función para establecer el tamaño del renderer
     const setSize = () => {
-      const width = mountRef.current.clientWidth;
-      const height = mountRef.current.clientHeight;
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
+      if (mountRef.current) {
+        const width = mountRef.current.clientWidth;
+        const height = mountRef.current.clientHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
     };
 
     setSize(); // Ajusta el tamaño inicial
 
     // Crear geometría del cubo y materiales
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     const materials = [
-      new THREE.MeshBasicMaterial({ color: 0xff0000 }), // Frente
-      new THREE.MeshBasicMaterial({ color: 0x00ff00 }), // Atrás
-      new THREE.MeshBasicMaterial({ color: 0x0000ff }), // Arriba
-      new THREE.MeshBasicMaterial({ color: 0xffff00 }), // Abajo
-      new THREE.MeshBasicMaterial({ color: 0xff00ff }), // Izquierda
-      new THREE.MeshBasicMaterial({ color: 0x00ffff }), // Derecha
-    ];
+      new THREE.MeshBasicMaterial({ color: 0xF7DF1E }), // JavaScript - Amarillo
+      new THREE.MeshBasicMaterial({ color: 0xE74C3C }), // Java - Rojo
+      new THREE.MeshBasicMaterial({ color: 0x306998 }), // Python - Azul oscuro
+      new THREE.MeshBasicMaterial({ color: 0x68217A }), // C# - Cyan oscuro
+      new THREE.MeshBasicMaterial({ color: 0x8CC84B }), // Node.js - Verde
+      new THREE.MeshBasicMaterial({ color: 0x61DAFB }), // React - Azul claro
+    ];       
 
     const cube = new THREE.Mesh(geometry, materials);
     scene.add(cube);
@@ -55,8 +59,10 @@ const RubikCube3D = () => {
     window.addEventListener('resize', setSize); // Usar la función setSize
 
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        mountRef.current.removeChild(renderer.domElement);
+      }
       window.removeEventListener('resize', setSize); // Limpiar el evento al desmontar
     };
   }, []);
