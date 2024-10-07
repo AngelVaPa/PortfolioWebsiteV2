@@ -6,7 +6,6 @@ const RubikCube3D = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    // Crear la escena, cámara y renderizador
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); 
@@ -17,7 +16,6 @@ const RubikCube3D = () => {
       mountRef.current.appendChild(renderer.domElement);
     }
 
-    // Función para establecer el tamaño del renderer
     const setSize = () => {
       if (mountRef.current) {
         const width = mountRef.current.clientWidth;
@@ -28,9 +26,8 @@ const RubikCube3D = () => {
       }
     };
 
-    setSize(); // Ajusta el tamaño inicial
+    setSize(); 
 
-    // Crear geometría del cubo y materiales
     const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     const materials = [
       new THREE.MeshBasicMaterial({ color: 0xF7DF1E }), // JavaScript - Amarillo
@@ -43,7 +40,7 @@ const RubikCube3D = () => {
 
     const cube = new THREE.Mesh(geometry, materials);
     scene.add(cube);
-    camera.position.z = 3; // Ajusta la posición de la cámara
+    camera.position.z = 3;
 
     // Función de animación
     const animate = () => {
@@ -55,8 +52,7 @@ const RubikCube3D = () => {
 
     animate();
 
-    // Manejo del tamaño de la ventana
-    window.addEventListener('resize', setSize); // Usar la función setSize
+    window.addEventListener('resize', setSize);
 
     return () => {
       if (mountRef.current) {
@@ -68,7 +64,7 @@ const RubikCube3D = () => {
   }, []);
 
   return (
-    <div className="rubik-cube-container" ref={mountRef} style={{ width: '100%', height: '400px' }} /> // Ajusta el alto según sea necesario
+    <div className="rubik-cube-container" ref={mountRef} style={{ width: '100%', height: '400px' }} /> 
   );
 };
 

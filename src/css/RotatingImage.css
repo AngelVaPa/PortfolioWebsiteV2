@@ -1,0 +1,38 @@
+.image-container {
+    perspective: 5000px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto !important; 
+    width: 100%;
+    overflow: hidden; 
+    margin-bottom: 15px;
+  }  
+  
+  .rotate-image {
+    width: auto; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Asegúrate de que la altura se ajuste automáticamente */
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5); /* Ajustes para una sombra más amplia y difusa */
+    border-radius: 10px;
+    cursor: grab; /* Cambia el cursor a "agarra" */
+    transition: transform 0.1s ease-out; /* Movimiento suave */
+  }
+  
+  .rotate-image:hover {
+    transform: translateZ(20px) rotateY(10deg); /* Ajusta los valores para mayor efecto 3D */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); /* Aumenta la sombra al hacer hover */
+  }
+
+  .rotate-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; 
+    transform: translateZ(-20px);
+    border-radius: 10px;
+  }
+  

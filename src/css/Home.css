@@ -80,6 +80,7 @@ body {
 
 #animated-text {
   font-size: 1.5rem; 
+  font-style: italic; 
   color: #ffda07; 
   overflow: hidden; 
   display: inline-flex;

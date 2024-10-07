@@ -7,7 +7,7 @@ const Skills = () => {
   const [showSkills, setShowSkills] = useState(false); // Estado para controlar la visibilidad de las habilidades
 
   const handleShowSkills = () => {
-    setShowSkills(true); // Cambia el estado a verdadero al hacer clic
+    setShowSkills(true); 
   };
 
   return (
@@ -15,7 +15,7 @@ const Skills = () => {
       <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}>
         {!showSkills && (
           <>
-            <h2 className="text-center mb-5">Skills</h2>
+            <h2 className="skillsTitle">Skills</h2>
             <RubikCube3D />
             <button 
               className="btn btn-primary mt-4" 

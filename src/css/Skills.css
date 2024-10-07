@@ -19,10 +19,9 @@
   text-align: center; /* Centra el texto del botón */
 }
 
-h2 {
-  font-size: 4rem; /* Tamaño de fuente grande */
-  color: #fff; /* Color del texto */
-  text-align: center; /* Centrar el texto */
+.skillsTitle{
+  color:#fff;
+  font-size: 3.5rem !important; /* Tamaño de fuente grande */
   margin-bottom: 2rem; /* Espacio debajo del título */
   text-transform: uppercase; /* Transformar texto a mayúsculas */
   letter-spacing: 1px; /* Espaciado entre letras */
@@ -32,7 +31,7 @@ h2 {
   background: url('../images/sec_title_img.jpg') center center / contain; 
 }
 
-h2::after {
+.skillsTitle::after {
   content: ''; /* Crear un elemento pseudo */
   display: block; 
   width: 50%; 
@@ -41,14 +40,6 @@ h2::after {
   margin: 0.5rem auto 0; 
   border-radius: 5px; 
 }
-
-@media (max-width: 768px) {
-  h2 {
-    font-size: 2rem; 
-    padding: 15px; 
-  }
-}
-
 
 h4 {
   color: #007bff; 

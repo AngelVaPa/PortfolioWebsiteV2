@@ -24,7 +24,7 @@ return (
     <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-            <a className="nav-link" href="about">
+            <a className="nav-link" href="aboutMe">
             About Me
             </a>
         </li>
