@@ -41,14 +41,53 @@ const RotatingImage = ({ src, alt }) => {
       image.style.cursor = 'grab'; // Cambia el cursor de vuelta
     };
 
+    const onTouchStart = (e) => {
+      isDragging = true;
+      const touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      image.style.cursor = 'grabbing'; // Cambia el cursor mientras se arrastra
+    };
+
+    const onTouchMove = (e) => {
+      if (!isDragging) return;
+
+      const touch = e.touches[0];
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+
+      rotationX += deltaY * 0.5; // Ajusta la rotación vertical
+      rotationY += deltaX * 0.5; // Ajusta la rotación horizontal
+
+      image.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+      startX = touch.clientX;
+      startY = touch.clientY;
+    };
+
+    const onTouchEnd = () => {
+      isDragging = false;
+      image.style.cursor = 'grab'; // Cambia el cursor de vuelta
+    };
+
     image.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
+
+    // Agregar eventos táctiles
+    image.addEventListener('touchstart', onTouchStart);
+    document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('touchend', onTouchEnd);
 
     return () => {
       image.removeEventListener('mousedown', onMouseDown);
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
+
+      // Limpiar eventos táctiles
+      image.removeEventListener('touchstart', onTouchStart);
+      document.removeEventListener('touchmove', onTouchMove);
+      document.removeEventListener('touchend', onTouchEnd);
     };
   }, []);
 
