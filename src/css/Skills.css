@@ -1,38 +1,41 @@
 #skills {
-  min-height: 100vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el cubo verticalmente */
+  justify-content: center; 
 }
 
 .rubik-cube-container {
   width: 100%; 
-  height: 400px; /* Ajusta la altura del cubo según sea necesario */
+  height: 400px; 
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Centra el cubo horizontalmente */
+  margin: 0 auto; 
 }
 
 .container {
   position: relative;
-  z-index: 3; /* Asegúrate de que sea mayor que el del cubo */
-  text-align: center; /* Centra el texto del botón */
+  z-index: 3; 
+  text-align: center; 
 }
 
 .skillsTitle{
-  color:#fff;
-  font-size: 3.5rem !important; /* Tamaño de fuente grande */
-  margin-bottom: 2rem; /* Espacio debajo del título */
-  text-transform: uppercase; /* Transformar texto a mayúsculas */
-  letter-spacing: 1px; /* Espaciado entre letras */
-  position: relative; /* Para el efecto de subrayado */
-  padding: 35px; /* Espaciado interno para el fondo */
-  border-radius: 8px; /* Bordes redondeados */
-  background: url('../images/sec_title_img.jpg') center center / contain; 
+  color: #fff; 
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 35px;
+  border-radius: 8px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(228, 228, 228, 0.5)), 
+    url('../images/sec_title_img.jpg'); 
+  background-size: contain; 
+  background-position: center; 
 }
 
 .skillsTitle::after {
-  content: ''; /* Crear un elemento pseudo */
+  content: ''; 
   display: block; 
   width: 50%; 
   height: 5px; 
