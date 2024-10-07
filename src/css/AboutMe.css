@@ -1,91 +1,209 @@
 #about {
-    min-height: 100vh; /* Ensure it takes the full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-  }
-  
-  .container {
-    position: relative;
-    z-index: 3; /* Ensure it's above any background effect */
-    text-align: center; /* Center the text inside the container */
-    max-width: 900px; /* Limit the container's width for better readability */
-    margin: 0 auto; /* Center the container horizontally */
-  } 
-  
-  .image-container {
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    z-index: 3;
-  }
-  
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.container {
+  position: relative;
+  z-index: 3; 
+  text-align: center; 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+
+.image-container {
+  perspective: 5000px !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  margin-bottom: 10px; 
+}
+
+.rotate-image {
+  width: auto; 
+  height: auto; 
+  max-width: 300px; 
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: grab; 
+  transition: transform 0.1s ease-out; 
+  padding-left: 50px;
+}
+
+.rotate-image:hover {
+  transform: translateZ(20px) rotateY(10deg); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); 
+}
+
+.rotate-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; 
+  transform: translateZ(-20px);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
   .rotate-image {
-    width: 300px;
-    height: auto;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    cursor: grab; /* Cursor changes to indicate it's draggable */
-    transition: transform 0.1s ease-out; /* Smooth movement during drag */
+    max-width: 50%; 
   }
-  
-  /* Agregar grosor a la imagen con ::before */
-  .rotate-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #222;
-    transform: translateZ(-20px);
-    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .rotate-image {
+    max-width: 50%; 
   }
-  
-  .aboutTitle{
-    color:#fff;
-    font-size: 3.5rem !important; /* Tamaño de fuente grande */
-    margin-bottom: 2rem;
-    margin-top: 8.5rem; /* Espacio debajo del título */
-    text-transform: uppercase; /* Transformar texto a mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    position: relative; /* Para el efecto de subrayado */
-    padding: 35px; /* Espaciado interno para el fondo */
-    border-radius: 8px; /* Bordes redondeados */
-    background: url('../images/sec_title_img.jpg') center center / contain;
+}
+
+.about-text p {
+  margin: 10px 0;
+  font-size: 1.25rem; 
+  line-height: 1.5; 
+}
+ 
+.aboutTitle {
+  color: #fff; 
+  font-size: 3.5rem;
+  margin: 8.5rem 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 35px;
+  border-radius: 8px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(228, 228, 228, 0.5)), 
+    url('../images/sec_title_img.jpg'); 
+  background-size: contain; 
+  background-position: center; 
+}
+
+.aboutTitle::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 5px;
+  background: #fff;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.emphText {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.text-primary {
+  color: #25e035 !important;
+  text-decoration: underline;
+}
+
+.text-primary:hover {
+  color: #0064cf !important;
+}
+
+.rotate-instruction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.rotate-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.instruction-text {
+  font-size: 1rem;
+  color: #ffc107;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-text p {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.8;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: aboutLineEffect 1s forwards;
+  margin: 20px;
+}
+
+@keyframes aboutLineEffect {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutTitle {
+    font-size: 2.5rem; 
+    margin: 4rem 0 1rem;
   }
 
-  .aboutTitle::after {
-    content: ''; /* Crear un elemento pseudo */
-    display: block; 
-    width: 50%; 
-    height: 5px; 
-    background: #fff; 
-    margin: 0.5rem auto 0; 
-    border-radius: 5px; 
+  .rotate-image {
+    width: 80%;
   }
 
   p {
-    font-size: 1.25rem; /* Slightly larger font size for paragraphs */
-    color: #fff; /* White text */
-    margin-bottom: 1.5rem; /* Space below each paragraph */
-    line-height: 1.8; /* Increase line height for readability */
+    font-size: 1rem;
   }
-  
-  .emphText {
-    font-weight: bold; /* Emphasize important text */
-    color: #ffc107; /* Use a different color for emphasis (yellowish) */
+
+  .about-text p {
+    font-size: 1.5rem; 
   }
-  
-  .text-primary {
-    color: #25e035 !important; /* Bootstrap's blue for links */
-    text-decoration: underline; /* Underline links */
+
+  .rotate-instruction {
+    flex-direction: column; 
+    align-items: center;
   }
-  
-  .text-primary:hover {
-    color: #0064cf !important; /* Darker blue for hover effect */
+
+  .rotate-icon {
+    font-size: 1.2rem;
   }
+
+  .instruction-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutTitle {
+    font-size: 2rem; 
+  }
+
+  p {
+    font-size: 0.9rem; 
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+}
