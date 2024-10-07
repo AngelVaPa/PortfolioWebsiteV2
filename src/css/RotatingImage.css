@@ -1,38 +1,50 @@
 .image-container {
-    perspective: 5000px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: auto !important; 
-    width: 100%;
-    overflow: hidden; 
-    margin-bottom: 15px;
-  }  
-  
-  .rotate-image {
-    width: auto; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Asegúrate de que la altura se ajuste automáticamente */
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5); /* Ajustes para una sombra más amplia y difusa */
-    border-radius: 10px;
-    cursor: grab; /* Cambia el cursor a "agarra" */
-    transition: transform 0.1s ease-out; /* Movimiento suave */
-  }
-  
-  .rotate-image:hover {
-    transform: translateZ(20px) rotateY(10deg); /* Ajusta los valores para mayor efecto 3D */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); /* Aumenta la sombra al hacer hover */
-  }
+  perspective: 5000px !important; /* Mantiene la perspectiva */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Asegura que ocupe el 100% del ancho del contenedor */
+  overflow: hidden; 
+  margin-bottom: 15px; /* Espacio inferior */
+}
 
-  .rotate-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; 
-    transform: translateZ(-20px);
-    border-radius: 10px;
+.rotate-image {
+  width: 100%; /* Se adapta al 100% del ancho del contenedor */
+  max-width: 300px; /* Máximo ancho para mantener proporciones */
+  height: auto; /* Asegura que la altura se ajuste automáticamente */
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5); /* Sombra más amplia y difusa */
+  border-radius: 10px;
+  cursor: grab; /* Cambia el cursor a "agarra" */
+  transition: transform 0.1s ease-out; /* Movimiento suave */
+}
+
+.rotate-image:hover {
+  transform: translateZ(20px) rotateY(10deg); /* Efecto 3D al hacer hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); /* Aumenta la sombra al hacer hover */
+}
+
+.rotate-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Color de fondo blanco */
+  transform: translateZ(-20px);
+  border-radius: 10px;
+}
+
+/* Media Queries para hacer la imagen más responsiva */
+@media (max-width: 768px) {
+  .rotate-image {
+    max-width: 80%; /* Se ajusta a un ancho relativo en pantallas pequeñas */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .rotate-image {
+    max-width: 50%; /* Se adapta completamente a pantallas muy pequeñas */
+  }
+}
