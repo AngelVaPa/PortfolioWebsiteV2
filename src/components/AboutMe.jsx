@@ -20,13 +20,13 @@ const AboutMe = () => {
           <p style={{ animationDelay: '6s' }} className="lead">
             Although I still love what I did for so many years, I have always been interested in software programming.
           </p>
-          <p style={{ animationDelay: '8s' }} className="lead">
+          <p style={{ animationDelay: '11s' }} className="lead">
             In 2022, I decided to move to Montreal, QC to study and give myself the opportunity to enter this world, which quickly became my passion.
           </p>
-          <p style={{ animationDelay: '10s' }} className="emphText">
+          <p style={{ animationDelay: '16s' }} className="emphText">
             I am currently completing my final semester and now seeking an entry-level position, focusing primarily on backend and web development.
           </p>
-          <p style={{ animationDelay: '12s' }} >
+          <p style={{ animationDelay: '21s' }} >
             Check out my work experience in detail on&nbsp;
             <a href='https://www.linkedin.com/in/angel-vapa/' className='text-primary' target="_blank" rel='noreferrer'>LinkedIn</a>.
           </p>
