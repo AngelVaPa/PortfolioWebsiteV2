@@ -6,7 +6,10 @@ import '../css/AboutMe.css';
 const AboutMe = () => {
   return (
     <section id="about" className="py-5 bg-light">    
-      <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}>
+      <div 
+        className="container d-flex flex-column align-items-center justify-content-center" 
+        style={{ minHeight: '100vh', position: 'relative', zIndex: 2 
+      }}>
         <h2 className="aboutTitle">About Me</h2>
         <RotatingImage src="src/images/profile.png" alt="3D Image" />
         <div className="rotate-instruction">
@@ -28,7 +31,12 @@ const AboutMe = () => {
           </p>
           <p style={{ animationDelay: '21s' }} >
             Check out my work experience in detail on&nbsp;
-            <a href='https://www.linkedin.com/in/angel-vapa/' className='text-primary' target="_blank" rel='noreferrer'>LinkedIn</a>.
+            <a 
+              href='https://www.linkedin.com/in/angel-vapa/' 
+              className='text-primary' 
+              target="_blank" 
+              rel='noreferrer'
+            >LinkedIn</a>.
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";  
 import Skills from "./components/Skills";  
 import AboutMe from "./components/AboutMe";  
+import Contact from "./components/Contact";  
 import ParticlesBackground from "./components/ParticlesBackground"; 
 import NavBar from "./components/NavBar";
 import './App.css';  
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/aboutMe" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

@@ -2,7 +2,7 @@
 import React, {useRef, useEffect} from "react";
 import ParticlesBackground from "./ParticlesBackground";
 import "../css/Home.css"; // Importa el CSS
-import { typeWriterEffect } from './typeWriter.js';
+import { typeWriterEffect } from '../utils/typeWriter.js';
 
 
 const Home = () => {
