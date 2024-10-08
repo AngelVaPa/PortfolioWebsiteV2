@@ -26,9 +26,7 @@ const Home = () => {
             <p className="lead text-light">Software Developer</p>
             <p id="animated-text" ref={textRef}>Give me a foothold and I will move the world.</p>
             <div className="mt-4">
-              <a href="#portfolio" className="btn btn-primary btn-lg me-3">
-                View My Work
-              </a>
+              <a id="githubBtn" href="https://github.com/JesusVaPa" target="_blank" rel='noreferrer' className="btn btn-outline-light btn-lg"></a>
               <a href="../../public/documents/AngelVazquezCV.pdf" download className="btn btn-outline-light btn-lg">
                 Download CV
               </a>
