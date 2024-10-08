@@ -1,14 +1,18 @@
-// eslint-disable-next-line no-unused-vars
+// Skills.jsx
 import React, { useState } from "react";
-import RubikCube3D from './RubikCube3D';
+import LiquidBars from './LiquidBars';
 import "../css/Skills.css";
 
 const Skills = () => {
-  const [showSkills, setShowSkills] = useState(false); // Estado para controlar la visibilidad de las habilidades
+  const [showSkills, setShowSkills] = useState(false); 
 
   const handleShowSkills = () => {
     setShowSkills(true); 
   };
+
+  // Porcentajes y colores para cada habilidad
+  const skillPercentages = [90, 80, 70, 60, 50];
+  const skillColors = ['0xff0000', '0xffff00', '0x00ff00', '0x0000ff', '0xff00ff']; // Colores como strings
 
   return (
     <section id="skills" className="py-5 bg-light">
@@ -16,9 +20,9 @@ const Skills = () => {
         {!showSkills && (
           <>
             <h2 className="skillsTitle">Skills</h2>
-            <RubikCube3D />
+            <LiquidBars percentages={skillPercentages} colors={skillColors} />
             <button 
-              className="btn btn-primary mt-4" 
+              className="btn btn-outline-light btn-lg" 
               onClick={handleShowSkills}
             >
               Show Skills
@@ -28,51 +32,7 @@ const Skills = () => {
 
         {showSkills && (
           <div className="row mt-5">
-            {/* Programming Languages */}
-            <div className="col-lg-6 mb-4">
-              <h4 className="text-primary">Programming Languages</h4>
-              <ul className="list-group">
-                <li className="list-group-item">JavaScript</li>
-                <li className="list-group-item">Swift</li>
-                <li className="list-group-item">Dart</li>
-                <li className="list-group-item">Java</li>
-                <li className="list-group-item">C#</li>
-              </ul>
-            </div>
-
-            {/* Frameworks & Libraries */}
-            <div className="col-lg-6 mb-4">
-              <h4 className="text-primary">Frameworks & Libraries</h4>
-              <ul className="list-group">
-                <li className="list-group-item">React</li>
-                <li className="list-group-item">Flutter</li>
-                <li className="list-group-item">Node.js</li>
-                <li className="list-group-item">Firebase</li>
-                <li className="list-group-item">Bootstrap</li>
-              </ul>
-            </div>
-
-            {/* Tools */}
-            <div className="col-lg-6 mb-4">
-              <h4 className="text-primary">Tools</h4>
-              <ul className="list-group">
-                <li className="list-group-item">Git</li>
-                <li className="list-group-item">GitHub</li>
-                <li className="list-group-item">Android Studio</li>
-                <li className="list-group-item">Xcode</li>
-                <li className="list-group-item">Visual Studio Code</li>
-              </ul>
-            </div>
-
-            {/* Databases */}
-            <div className="col-lg-6 mb-4">
-              <h4 className="text-primary">Databases</h4>
-              <ul className="list-group">
-                <li className="list-group-item">Firestore</li>
-                <li className="list-group-item">MySQL</li>
-                <li className="list-group-item">PostgreSQL</li>
-              </ul>
-            </div>
+            {/* Aquí puedes continuar con la lógica para mostrar habilidades */}
           </div>
         )}
       </div>
