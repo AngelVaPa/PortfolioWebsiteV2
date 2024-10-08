@@ -24,7 +24,7 @@ const Home = () => {
           <div className="hero-content">
             <h1 className="display-3 text-white">Angel Vazquez</h1>
             <p className="lead text-light">Software Developer</p>
-            <span id="animated-text" ref={textRef}>Give me a foothold and I will move the world.</span>
+            <p id="animated-text" ref={textRef}>Give me a foothold and I will move the world.</p>
             <div className="mt-4">
               <a href="#portfolio" className="btn btn-primary btn-lg me-3">
                 View My Work
