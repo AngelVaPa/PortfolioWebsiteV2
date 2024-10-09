@@ -18,21 +18,21 @@
       "category": "programming"
     },
     {
-      "id": 4,
-      "name": "Dart",
-      "level": "70",
-      "category": "programming"
+        "id": 4,
+        "name": "Java",
+        "level": "70",
+        "category": "programming"
     },
     {
-      "id": 5,
-      "name": "Java",
-      "level": "70",
-      "category": "programming"
+        "id": 5,
+        "name": "Python",
+        "level": "65",
+        "category": "programming"
     },
     {
       "id": 6,
-      "name": "Python",
-      "level": "65",
+      "name": "Dart",
+      "level": "40",
       "category": "programming"
     },
     {
