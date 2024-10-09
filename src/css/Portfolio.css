@@ -34,7 +34,8 @@
 
 .project-container {
     display: flex;
-    flex-direction: column; 
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: center; 
     gap: 2rem;
 }
@@ -49,12 +50,16 @@
     background: linear-gradient(rgba(44, 44, 44, 0.411), rgba(65, 63, 63, 0.658));
     padding: 10px;
     border-radius: 5px;
+    text-align: center; 
 }
 
 .thumbnail {
-    width: 450px; 
-    height: 250px;    
+    width: 100%; 
+    max-width: 450px; 
+    height: auto;
+    aspect-ratio: 16 / 9; 
 }
+
 
 .thumbnail:hover {
     transform: scale(0.95);
@@ -79,15 +84,16 @@
     .portfolioTitle {
         font-size: 2.5rem; 
         margin: 4rem 0 1rem;
+        margin-bottom: 5rem;
     }
 
-    .project-container {
-        flex-direction: column; 
+    .project {
+        flex-basis: 100%; 
+        max-width: 100%; 
     }
 
     .thumbnail {
-        width: 100%; 
-        max-width: 450px;
+        width: 90%; 
     }
 
     .prj-title {
