@@ -16,7 +16,7 @@ const RubikCube3D = () => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-    renderer.setClearColor(0x000000, 0); // Fondo transparente
+    renderer.setClearColor(0x000000, 0); 
     if (mountRef.current) {
       mountRef.current.appendChild(renderer.domElement);
     }
@@ -35,12 +35,12 @@ const RubikCube3D = () => {
 
     const loader = new THREE.TextureLoader();
     const materials = [
-      new THREE.MeshBasicMaterial({ map: loader.load(javascriptLogo) }), // JavaScript
-      new THREE.MeshBasicMaterial({ map: loader.load(javaLogo) }),       // Java
-      new THREE.MeshBasicMaterial({ map: loader.load(pythonLogo) }),     // Python
-      new THREE.MeshBasicMaterial({ map: loader.load(csharpLogo) }),     // C#
-      new THREE.MeshBasicMaterial({ map: loader.load(nodejsLogo) }),     // Node.js
-      new THREE.MeshBasicMaterial({ map: loader.load(reactLogo) }),      // React
+      new THREE.MeshBasicMaterial({ map: loader.load(javascriptLogo) }), 
+      new THREE.MeshBasicMaterial({ map: loader.load(javaLogo) }),       
+      new THREE.MeshBasicMaterial({ map: loader.load(pythonLogo) }),     
+      new THREE.MeshBasicMaterial({ map: loader.load(csharpLogo) }),   
+      new THREE.MeshBasicMaterial({ map: loader.load(nodejsLogo) }),     
+      new THREE.MeshBasicMaterial({ map: loader.load(reactLogo) }),    
     ];
 
     const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
@@ -48,7 +48,6 @@ const RubikCube3D = () => {
     scene.add(cube);
     camera.position.z = 3;
 
-    // Función de animación
     const animate = () => {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.01;
@@ -62,6 +61,7 @@ const RubikCube3D = () => {
 
     return () => {
       if (mountRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         mountRef.current.removeChild(renderer.domElement);
       }
       window.removeEventListener('resize', setSize);
