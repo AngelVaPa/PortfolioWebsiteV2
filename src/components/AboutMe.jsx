@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import RotatingImage from './RotatingImage'; 
+import RotatingImage from './RotatingImage';
+import profileImage from '../images/profile.png'; 
 import '../css/AboutMe.css';
 
 const AboutMe = () => {
@@ -11,7 +12,7 @@ const AboutMe = () => {
         style={{ minHeight: '100vh', position: 'relative', zIndex: 2 
       }}>
         <h2 className="aboutTitle">About Me</h2>
-        <RotatingImage src="src/images/profile.png" alt="3D Image" />
+        <RotatingImage src={profileImage} alt="3D Image" />
         <div className="rotate-instruction">
           <span className="rotate-icon">🔄</span>
           <span className="instruction-text">Grab, and spin me!</span>
