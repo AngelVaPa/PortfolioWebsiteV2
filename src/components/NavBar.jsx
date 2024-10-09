@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Link } from "react-router-dom"; // Importa Link
+import { Link } from "react-router-dom"; 
 import profileImage from '../images/javap_logo.png';
 import "../css/NavBar.css"
 
@@ -25,22 +25,22 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/aboutMe"> {/* Cambia a Link */}
+              <Link className="nav-link" to="/aboutMe">
                 About Me
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/portfolio"> {/* Cambia a Link */}
+              <Link className="nav-link" to="/portfolio"> 
                 Portfolio
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/skills"> {/* Cambia a Link */}
+              <Link className="nav-link" to="/skills">
                 Skills
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact"> {/* Cambia a Link */}
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </li>

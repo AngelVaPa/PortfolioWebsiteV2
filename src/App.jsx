@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import ParticlesBackground from "./components/ParticlesBackground"; 
 import NavBar from "./components/NavBar";
 import './App.css';  
+import Portfolio from "./components/Portfolio";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/aboutMe" element={<AboutMe />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,116 @@
+#portfolio {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+  
+  .portfolio-text p {
+    margin: 10px 0;
+    font-size: 1.25rem; 
+    line-height: 1.5; 
+  }
+   
+  .portfolioTitle {
+    color: #fff; 
+    font-size: 3rem;
+    margin: 8.5rem 0 2rem;
+    margin-top: 8.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(228, 228, 228, 0.5)), 
+      url('../images/sec_title_img.jpg'); 
+    background-size: contain; 
+    background-position: center; 
+  }
+  
+  .portfolioTitle::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5px;
+    background: #fff;
+    margin: 0.5rem auto 0;
+    border-radius: 5px;
+  }
+  
+  .portfolio-text {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio-text p {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.8;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: aboutLineEffect 1s forwards;
+    margin: 20px;
+  }
+  
+  .prj-title{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background: linear-gradient(rgba(44, 44, 44, 0.411), rgba(65, 63, 63, 0.658));
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+  }
+
+  .thumbnail{
+    width: 450px;
+    height: 250px;
+  }
+
+  .thumbnail:hover{
+    transform: scale(0.95);
+    cursor: pointer;
+  }
+
+  #portfolioV1{
+    background: url('../images/thumbnails/portfolioV1.png');
+    background-size: contain; 
+    background-position: center; 
+  }
+
+  #techBooksV1{
+    background: url('../images/thumbnails/techBooksV1.png');
+    background-size: contain; 
+    background-position: center; 
+  }
+
+  @media (max-width: 768px) {
+    .portfolioTitle {
+      font-size: 2.5rem; 
+      margin: 4rem 0 1rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .portfolio-text p {
+      font-size: 1.5rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .portfolioTitle {
+      font-size: 2rem; 
+    }
+  
+    p {
+      font-size: 0.9rem; 
+    }
+  
+    .portfolio-text p {
+      font-size: 1.2rem;
+    }
+  }
+  
