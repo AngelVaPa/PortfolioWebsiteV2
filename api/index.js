@@ -31,9 +31,9 @@ app.get('/api/skills', (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).json({ message: 'Ruta no encontrada' });
+  res.status(404).json({ message: 'Rute Not Found.' });
 });
 
 app.listen(port, () => {
-  console.log(`API listening at http://localhost:${port}`);
+  console.log(`API listening at https://portfoliowebsitev2-api.onrender.com`);
 });
