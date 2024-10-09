@@ -71,6 +71,8 @@ const Skills = () => {
                   <ProgressBar percentage={80} />
                   <span className='tech-title' style={{ color: "#ffffff" }}>Express</span>
                   <ProgressBar percentage={80} />
+                  <span className='tech-title' style={{ color: "#8CC84B" }}>Node.js</span> 
+                  <ProgressBar percentage={80} />
                   <span className='tech-title' style={{ color: "#512BD4" }}>ASP.NET Core</span>
                   <ProgressBar percentage={70} />
                   <span className='tech-title' style={{ color: "#02569B" }}>Flutter</span>
