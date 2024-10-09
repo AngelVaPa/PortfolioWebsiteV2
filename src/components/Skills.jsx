@@ -59,7 +59,7 @@ const Skills = () => {
                 <>
                   {skills.filter(skill => skill.category === 'programming').map(skill => (
                     <div key={skill.id}>
-                      <span className={`tech-title.${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
+                      <span className={`tech-title.${skill.name}`}>{skill.name}</span>
                       <ProgressBar percentage={parseInt(skill.level)} />
                     </div>
                   ))}
