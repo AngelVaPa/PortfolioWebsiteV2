@@ -65,12 +65,14 @@
     background: url('../images/thumbnails/techBooksV1.png');
     background-size: contain; 
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 #portfolioV1{
     background: url('../images/thumbnails/portfolioV1.png');
     background-size: contain; 
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
