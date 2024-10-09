@@ -1,17 +1,15 @@
 import express from 'express';
 import cors from 'cors';
-import skills from './skills/skills.json';
-
 const app = express();
+import skills from './skills/skills.json' assert { type: 'json' }; 
 
 app.use(cors());
 
 app.get('/api/skills', (req, res) => {
-  res.json(skills);
+  res.json(skills); 
 });
 
-// eslint-disable-next-line no-undef
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
