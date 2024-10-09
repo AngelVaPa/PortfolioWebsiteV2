@@ -71,7 +71,7 @@
   color: #fff;
   background: linear-gradient(rgba(44, 44, 44, 0.411), rgba(65, 63, 63, 0.658));
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
