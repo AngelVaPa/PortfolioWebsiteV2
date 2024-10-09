@@ -13,7 +13,7 @@
     },
     {
       "id": 3,
-      "name": "C#",
+      "name": "CSharp",
       "level": "70",
       "category": "programming"
     },
@@ -49,22 +49,22 @@
     },
     {
       "id": 9,
-      "name": "ASP.NET Core",
+      "name": "ASPNETCore",
       "level": "70",
       "category": "frameworks"
     },
     {
-      "id": 10,
-      "name": "Flutter",
-      "level": "70",
-      "category": "frameworks"
-    },
-    {
-        "id": 11,
-        "name": "Node.js",
+        "id": 10,
+        "name": "Nodejs",
         "level": "70",
         "category": "frameworks"
-      },
+    },
+    {
+      "id": 11,
+      "name": "Flutter",
+      "level": "40",
+      "category": "frameworks"
+    },
     {
       "id": 12,
       "name": "HTML",
