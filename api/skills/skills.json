@@ -88,18 +88,6 @@
       "name": "MySQL",
       "level": "70",
       "category": "webTechnologies"
-    },
-    {
-      "id": 16,
-      "name": "Amazon Web Services online course by Midudev",
-      "level": "learning",
-      "category": "learning"
-    },
-    {
-      "id": 17,
-      "name": "The Git & Github Bootcamp by Colt Steele",
-      "level": "learning",
-      "category": "learning"
     }
   ]
   
