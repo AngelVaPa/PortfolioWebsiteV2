@@ -96,3 +96,63 @@
     align-items: flex-start; 
   }
 }
+
+.tech-title.JavaScript {
+  color: #f0db4f; 
+}
+
+.tech-title.TypeScript {
+  color: #007acc; 
+}
+
+.tech-title.CSharp {
+  color: #68217A; 
+}
+
+.tech-title.Dart {
+  color: #00B4B6; 
+}
+
+.tech-title.Java {
+  color: #007396;
+}
+
+.tech-title.Python {
+  color: #3776AB; 
+}
+
+.tech-title.React {
+  color: #61dafb; 
+}
+
+.tech-title.Express {
+  color: #ffffff;
+}
+
+.tech-title.ASPNETCore {
+  color: #5C2D91;
+}
+
+.tech-title.Flutter {
+  color: #02569B;
+}
+
+.tech-title.Nodejs {
+  color: #8CC84B; 
+}
+
+.tech-title.HTML {
+  color: #e34c26; 
+}
+
+.tech-title.CSS {
+  color: #264de4; 
+}
+
+.tech-title.Bootstrap {
+  color: #563d7c; 
+}
+
+.tech-title.MySQL {
+  color: #00758f;
+}
