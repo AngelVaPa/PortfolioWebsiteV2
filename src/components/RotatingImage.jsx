@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-// RotatingImage.jsx
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef } from 'react';
 import '../css/RotatingImage.css';
@@ -18,7 +17,7 @@ const RotatingImage = ({ src, alt }) => {
       isDragging = true;
       startX = e.clientX;
       startY = e.clientY;
-      image.style.cursor = 'grabbing'; // Cambia el cursor mientras se arrastra
+      image.style.cursor = 'grabbing'; 
     };
 
     const onMouseMove = (e) => {
@@ -27,8 +26,8 @@ const RotatingImage = ({ src, alt }) => {
       const deltaX = e.clientX - startX;
       const deltaY = e.clientY - startY;
 
-      rotationX += deltaY * 0.5; // Ajusta la rotación vertical
-      rotationY += deltaX * 0.5; // Ajusta la rotación horizontal
+      rotationX += deltaY * 0.5; 
+      rotationY += deltaX * 0.5; 
 
       image.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
 
@@ -38,7 +37,7 @@ const RotatingImage = ({ src, alt }) => {
 
     const onMouseUp = () => {
       isDragging = false;
-      image.style.cursor = 'grab'; // Cambia el cursor de vuelta
+      image.style.cursor = 'grab';
     };
 
     const onTouchStart = (e) => {
@@ -46,7 +45,7 @@ const RotatingImage = ({ src, alt }) => {
       const touch = e.touches[0];
       startX = touch.clientX;
       startY = touch.clientY;
-      image.style.cursor = 'grabbing'; // Cambia el cursor mientras se arrastra
+      image.style.cursor = 'grabbing';
     };
 
     const onTouchMove = (e) => {
@@ -56,8 +55,8 @@ const RotatingImage = ({ src, alt }) => {
       const deltaX = touch.clientX - startX;
       const deltaY = touch.clientY - startY;
 
-      rotationX += deltaY * 0.5; // Ajusta la rotación vertical
-      rotationY += deltaX * 0.5; // Ajusta la rotación horizontal
+      rotationX += deltaY * 0.5; 
+      rotationY += deltaX * 0.5; 
 
       image.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
 
@@ -67,14 +66,13 @@ const RotatingImage = ({ src, alt }) => {
 
     const onTouchEnd = () => {
       isDragging = false;
-      image.style.cursor = 'grab'; // Cambia el cursor de vuelta
+      image.style.cursor = 'grab'; 
     };
 
     image.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
 
-    // Agregar eventos táctiles
     image.addEventListener('touchstart', onTouchStart);
     document.addEventListener('touchmove', onTouchMove);
     document.addEventListener('touchend', onTouchEnd);
@@ -84,7 +82,6 @@ const RotatingImage = ({ src, alt }) => {
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
 
-      // Limpiar eventos táctiles
       image.removeEventListener('touchstart', onTouchStart);
       document.removeEventListener('touchmove', onTouchMove);
       document.removeEventListener('touchend', onTouchEnd);
