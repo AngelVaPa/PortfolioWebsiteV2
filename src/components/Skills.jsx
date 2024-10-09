@@ -105,8 +105,18 @@ const Skills = () => {
               {visibleSections['learning'] && (
                 <>
                   <br/>
-                  <li className='li-learning'>Amazon Web Services online course by <a href='https://midu.dev/' className='text-primary' target="_blank" rel='noreferrer'>Midudev.</a></li>
-                  <li className='li-learning'>The Git & Github Bootcamp by <a href='https://www.udemy.com/user/coltsteele/' className='text-primary' target="_blank" rel='noreferrer'>Colt Steele.</a></li>
+                  <li className='li-learning'>
+                    Amazon Web Services online course by 
+                    <a href='https://midu.dev/' className='text-primary' target="_blank" rel='noreferrer'>
+                      Midudev.
+                    </a>
+                  </li>
+                  <li className='li-learning'>
+                    The Git & Github Bootcamp by 
+                    <a href='https://www.udemy.com/user/coltsteele/' className='text-primary' target="_blank" rel='noreferrer'>
+                      Colt Steele.
+                    </a>
+                  </li>
                 </>
               )}
             </div>
