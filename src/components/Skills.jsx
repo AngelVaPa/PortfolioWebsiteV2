@@ -38,7 +38,9 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-5 bg-light">
-      <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}>
+      <div 
+        className="container d-flex flex-column align-items-center justify-content-center" 
+        style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}>
         {!showSkills && (
           <>
             <h2 className="skillsTitle">Skills</h2>
@@ -104,10 +106,22 @@ const Skills = () => {
                 I am learning...
               </h4>
               {visibleSections['learning'] && (
-                <ul>
-                  <li className='li-learning'>Amazon Web Services online course by <a href='https://midu.dev/' className='text-primary' target="_blank" rel='noreferrer'>Midudev.</a></li>
-                  <li className='li-learning'>The Git & Github Bootcamp by <a href='https://www.udemy.com/user/coltsteele/' className='text-primary' target="_blank" rel='noreferrer'>Colt Steele.</a></li>
-                </ul>
+                <div className="learning-container">
+                  <ul className="learning-list">
+                    <li className='li-learning'>
+                      Amazon Web Services online course by 
+                      <a href='https://midu.dev/' className='text-primary' target="_blank" rel='noreferrer'>
+                      Midudev.
+                      </a>
+                    </li>
+                    <li className='li-learning'>
+                      The Git & Github Bootcamp by 
+                      <a href='https://www.udemy.com/user/coltsteele/' className='text-primary' target="_blank" rel='noreferrer'>
+                      Colt Steele.
+                      </a>
+                    </li>
+                  </ul>
+                </div>  
               )}
             </div>
           </div><p className='anotation'>This information was taken from my own API hosted on render.</p>
