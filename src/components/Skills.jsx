@@ -8,16 +8,23 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [showSkills, setShowSkills] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
+  
+  // eslint-disable-next-line no-undef
+  const apiUrl = process.env.REACT_APP_API_URL || 'https://portfoliowebsitev2-api.onrender.com/api/skills';
 
   useEffect(() => {
     const fetchSkills = async () => {
-      const response = await fetch('https://portfoliowebsitev2-api.onrender.com');
-      const data = await response.json();
-      setSkills(data);
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        setSkills(data);
+      } catch (error) {
+        console.error('Error fetching skills:', error);
+      }
     };
     
     fetchSkills();
-  }, []);
+  }, [apiUrl]);
 
   const handleShowSkills = () => {
     setShowSkills(true);
