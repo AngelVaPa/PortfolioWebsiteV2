@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center; 
+  padding: 20px; 
 }
 
 .rubik-cube-container {
@@ -42,18 +43,20 @@
   border-radius: 5px; 
 }
 
-.div-title{
+.div-title {
   font-size: 2rem;
-  color: #fff;
+  color: #fff;  
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(22, 22, 22, 0.5));
+  padding: 10px;
 }
 
 .div-title:hover {
   color: #00cf2d;
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
-.tech-title{
+.tech-title {
   font-size: 1.5rem;
   margin-bottom: 0;
   background: linear-gradient(rgba(44, 44, 44, 0.411), rgba(65, 63, 63, 0.658));
@@ -63,10 +66,33 @@
   border-radius: 5px;
 }
 
-.li-learning{
+.li-learning {
   font-size: 1.2rem;
   color: #fff;
   background: linear-gradient(rgba(44, 44, 44, 0.411), rgba(65, 63, 63, 0.658));
   list-style: none;
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .skillsTitle {
+    font-size: 2.5rem;
+  }
+
+  .div-title {
+    font-size: 1.5rem;
+  }
+
+  .tech-title {
+    font-size: 1.2rem; 
+  }
+
+  .li-learning {
+    font-size: 1rem; 
+  }
+
+  .row {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
 }
