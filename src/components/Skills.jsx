@@ -10,7 +10,7 @@ const Skills = () => {
   const [visibleSections, setVisibleSections] = useState({});
   
   // eslint-disable-next-line no-undef
-  const apiUrl = process.env.REACT_APP_API_URL || 'https://portfoliowebsitev2-api.onrender.com/api/';
+  const apiUrl = 'https://portfoliowebsitev2-api.onrender.com/api/skills';
 
   useEffect(() => {
     const fetchSkills = async () => {
