@@ -12,7 +12,6 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      {/* Particles as Background */}
       <ParticlesBackground />   
       <NavBar/>    
 
