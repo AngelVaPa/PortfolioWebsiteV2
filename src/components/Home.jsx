@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useRef, useEffect} from "react";
-import ParticlesBackground from "./ParticlesBackground";
-import "../css/Home.css"; // Importa el CSS
+import "../css/Home.css"; 
 import { typeWriterEffect } from '../utils/typeWriter.js';
 
 
@@ -15,10 +14,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Particles Background */}
-      <ParticlesBackground />
-
-      {/* Hero Section */}
       <header className="hero-section d-flex align-items-center justify-content-center text-center">
         <div className="container">
           <div className="hero-content">
