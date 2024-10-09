@@ -101,6 +101,7 @@
   overflow: hidden; 
   display: inline-flex;
   transition: color 0.3s, transform 0.3s ease;
+  margin-left: 5px;
 }
 
 .email:hover {
