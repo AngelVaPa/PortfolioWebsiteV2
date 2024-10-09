@@ -11,7 +11,7 @@ const Skills = () => {
 
   useEffect(() => {
     const fetchSkills = async () => {
-      const response = await fetch('https://<your-api-name>.onrender.com/api/skills');
+      const response = await fetch('https://portfoliowebsitev2-api.onrender.com');
       const data = await response.json();
       setSkills(data);
     };
