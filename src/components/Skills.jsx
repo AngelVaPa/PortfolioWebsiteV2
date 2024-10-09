@@ -50,7 +50,7 @@ const Skills = () => {
         )}
 
         {showSkills && (
-          <div className="row mt-5">
+          <><div className="row mt-5">
             <div className="col-lg-6 mb-4">
               <h4 className="div-title" onClick={() => toggleSection('programming')}>
                 Programming Languages
@@ -59,7 +59,7 @@ const Skills = () => {
                 <>
                   {skills.filter(skill => skill.category === 'programming').map(skill => (
                     <div key={skill.id}>
-                       <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
+                      <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
                       <ProgressBar percentage={parseInt(skill.level)} />
                     </div>
                   ))}
@@ -75,7 +75,7 @@ const Skills = () => {
                 <>
                   {skills.filter(skill => skill.category === 'frameworks').map(skill => (
                     <div key={skill.id}>
-                       <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
+                      <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
                       <ProgressBar percentage={parseInt(skill.level)} />
                     </div>
                   ))}
@@ -91,7 +91,7 @@ const Skills = () => {
                 <>
                   {skills.filter(skill => skill.category === 'webTechnologies').map(skill => (
                     <div key={skill.id}>
-                       <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
+                      <span className={`tech-title ${skill.name.replace(/\s+/g, '')}`}>{skill.name}</span>
                       <ProgressBar percentage={parseInt(skill.level)} />
                     </div>
                   ))}
@@ -110,7 +110,8 @@ const Skills = () => {
                 </ul>
               )}
             </div>
-          </div>
+          </div><p className='anotation'>This information was taken from my own API hosted on render.</p>
+          </>
         )}
       </div>
     </section>
