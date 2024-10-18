@@ -22,7 +22,7 @@ const Home = () => {
             <p id="animated-text" ref={textRef}>Give me a foothold and I will move the world.</p>
             <div className="mt-4">
               <a id="githubBtn" href="https://github.com/JesusVaPa" target="_blank" rel='noreferrer' className="btn btn-outline-light btn-lg"></a>
-              <a href="../../public/documents/Jesus-Vazquez-FlowCV-Resume-20241018.pdf" download className="btn btn-outline-light btn-lg">
+              <a href="public\documents\Jesus-Vazquez-FlowCV-Resume-20241018.pdf" download className="btn btn-outline-light btn-lg">
                 Download CV
               </a>
             </div>
