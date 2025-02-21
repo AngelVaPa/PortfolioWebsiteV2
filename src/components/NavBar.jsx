@@ -13,7 +13,7 @@ const NavBar = () => {
         </Link>
         <button
           className="navbar-toggler"
-          type="button"
+          type="button" 
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
@@ -30,8 +30,8 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/portfolio"> 
-                Portfolio
+              <Link className="nav-link" to="/experience">
+                Experience 
               </Link>
             </li>
             <li className="nav-item">

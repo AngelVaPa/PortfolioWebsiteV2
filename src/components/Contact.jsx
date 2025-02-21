@@ -38,7 +38,6 @@ const Contact = () => {
            style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}>
         
         <h2 className="contactTitle">Contact</h2>
-
         <p className="contact-cont">
           <i className="fas fa-envelope" title="Email"></i> Email 
           <span className="email" onClick={handleCopyEmail} style={{ cursor: 'pointer' }}>

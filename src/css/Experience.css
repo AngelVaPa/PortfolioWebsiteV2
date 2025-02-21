@@ -1,11 +1,11 @@
-#portfolio {
+#experience {
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
 }
 
-.portfolioTitle {
+.experienceTitle {
     color: #fff; 
     font-size: 3rem;
     margin: 8.5rem 0 2rem;
@@ -22,7 +22,7 @@
     background-position: center; 
 }
 
-.portfolioTitle::after {
+.experienceTitle::after {
     content: '';
     display: block;
     width: 50%;
@@ -32,12 +32,29 @@
     border-radius: 5px;
 }
 
-.project-container {
+.project-cont {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container h2 {
+    color: #ffda07;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.experience-cont {
+    color: white;
+    text-align: justify;
+    background-color: #b1b1b11f;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.project {
+    flex: 1 1 45%; /* Adjust the basis percentage as needed */
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .project {
@@ -81,7 +98,7 @@
 }
 
 @media (max-width: 768px) {
-    .portfolioTitle {
+    .experienceTitle {
         font-size: 2.5rem; 
         margin: 4rem 0 1rem;
         margin-bottom: 5rem;
@@ -102,7 +119,7 @@
 }
 
 @media (max-width: 480px) {
-    .portfolioTitle {
+    .experienceTitle {
         font-size: 2rem; 
     }
 
