@@ -97,6 +97,13 @@
     background-repeat: no-repeat;
 }
 
+#easyTasks{
+    background: url('../images/thumbnails/easyTasks.png');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 768px) {
     .experienceTitle {
         font-size: 2.5rem; 
